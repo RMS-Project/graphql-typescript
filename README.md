@@ -1,6 +1,6 @@
-## GraphiQL
+## GraphQL
 
-<b>GraphiQL</b> - Estrutura de escrita e leitura através da comunicação do Backend como Frontend.
+<b>GraphQL</b> - Estrutura de escrita e leitura através da comunicação do Backend como Frontend.
 
 Conjunto de padrões para comunicar o Backend com o Frontend.
 
@@ -21,6 +21,8 @@ Possui apenas uma única rota rota.
  O Backend diz que tem todos os dados que o frontend precisa e o frontend faz uma requisição chamada Query. Desta forma o Front é quem define quais dados ele quer ter de retorno.
 
  GraphQL pode ser criado de duas formas Esquema-Fist ou Code-Fist.
+
+ $name: String! - O ponto de exclamação indica que este campo é obrigatório. Diferente de typeScript que deve-se marcar os campos que não são obrigatórios.
 
 ```gpl
 
@@ -121,4 +123,41 @@ O GraphQL PlayGround é como o Insomnia ou o Postman para Rest.
 
 O GraphQL tem tipagem forte, possui inteligencia sobre as query criadas. Gerando uma documentação totalmente automatizada.
 
-46:17
+A variável data em userResolver utilizará a pasta model e inputs para representar os elementos
+do banco de dados.
+
+No GraphQl o array é colocado dentro do colchetes ``` "[user]" ``` e não ao final como no TypeScript ``` "user[]" ```.
+
+<h4>Criação de um usuário</h4>
+
+No graphQL temos dois conceitos para a criação de entidades.
+
+- Query - Buscar dados
+
+- Mutation - Criar, alterar, ou deletar
+
+Quando se cria as consultas e alterações no arquivo UserResolver.ts ele gera  e atualiza o arquivo schema.ggl
+
+
+
+<h2>Frontend</h2>
+
+Instalar Apollo/client e Graphql
+
+<b>npm i @apollo/client graphql</b>
+
+Para paginação procurar por "fetchMore" na documentação do apollo server.
+
+Para validação procurar para class validator na documentação do do type GraphQL
+```
+import { Length } from "class-validator"
+
+```
+
+```
+@Field()
+@Length(10, 50)
+name: string;
+
+```
+OBS: Arquivo User.ts
