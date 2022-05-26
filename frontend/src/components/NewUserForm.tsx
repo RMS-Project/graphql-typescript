@@ -2,6 +2,7 @@ import { gql, useMutation } from "@apollo/client";
 import { FormEvent, useState } from "react";
 import { GET_USERS } from "../App";
 import { client } from "../lib/apollo";
+import * as S from './styled';
 
 const CREATE_USER = gql`
   mutation ($name: String!) {
@@ -59,7 +60,7 @@ export function NewUserForm() {
   return (
     <form onSubmit={handleCreateUser}>
       <input type="text" value={name} onChange={e => setName(e.target.value)} />
-      <button type="submit">Enviar</button>
+      <S.Button type="submit">Enviar</S.Button>
     </form>
   )
 }
