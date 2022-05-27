@@ -104,7 +104,9 @@ Adicionar a importação do reflect-metadata no arquivo index.ts
 
 Inicie o servidor
 
-<b>npm run dev</b>
+```
+npm run dev
+```
 
 Será apresentado o PlayGround do Apollo Server
 
@@ -132,27 +134,40 @@ Quando se cria as consultas e alterações no arquivo UserResolver.ts ele gera  
 <h2>Frontend</h2>
 
 Criar a pasta Frontend e iniciar o React
-<b>npm create vite@latest</b> 
+
+```
+npm create vite@latest
+```
 
 ou 
 
-<b>yarn add vite</b>
+```
+yarn add vite
+```
 
 Iniciar do Zero a pasta backend
 
-<b>npm init -y</b>
+```
+npm init -y
+```
 
 ou
 
-<b>yarn init -y</b>
+```
+yarn init -y
+```
 
 Instalar Apollo/client e Graphql
 
-<b>npm i @apollo/client graphql</b>
+```
+npm i @apollo/client graphql
+```
 
 ou
 
-<b>yarn add @apollo/client graphql</b>
+```
+yarn add @apollo/client graphql
+```
 
 
 
